@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-family: "Red Hat Display", sans-serif;
+
+  --PaleBlue: hsl(225, 100%, 94%);
+  --BrightBlue: hsl(245, 75%, 52%);
+  --BrightBlueLight: hsla(245, 75%, 52%,.3);
+
+  --VeryPaleBlue: hsl(225, 100%, 98%);
+  --DesaturatedBlue: hsl(224, 23%, 55%);
+  --DesaturatedBlueLight: hsla(224, 23%, 55%,.05);
+  --DarkBlue: hsl(223, 47%, 23%);
+}
+body {
+  min-height: 100svh;
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-color: var(--PaleBlue);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+    max-width: 20rem;
+    position: sticky;
+    z-index: 1;
+    margin: 1rem;
+    background-color: var(--VeryPaleBlue);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0 var(--BrightBlueLight);
+}
+.img-hero {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.head {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--DarkBlue);
+}
+.description {
+    margin-top: 1rem;
+    color: var(--DesaturatedBlue);
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.plan {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--DesaturatedBlueLight);
+    border-radius: 10px;
+    margin-inline: 1rem;
+    padding-inline: 1rem;
+    padding-block: .8rem;
+}
+.plan-music {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.annual {
+    font-size: .8rem;
+    font-weight: 800;
+    color: var(--DarkBlue);
+}
+.price {
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--DesaturatedBlue);
+}
+.change {
+    text-decoration: underline;
+    font-size: .7rem;
+    font-weight: 800;
+    color: var(--BrightBlue);
+    cursor: pointer;
+}
+.change:hover {
+    color: var(--BrightBlueLight);
+}
+.proceed {
+    width: 90%;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding-block: .8rem;
+    border: none;
+    background-color: var(--BrightBlue);
+    color: var(--VeryPaleBlue);
+    font-weight: 700;
+    box-shadow: 0 10px 20px 0 var(--BrightBlueLight);
+    cursor: pointer;
+}
+.proceed:hover {
+    background-color: var(--BrightBlueLight);
+}
+.cancel {
+    font-size: .8rem;
+    font-weight: 800;
+    color: var(--DesaturatedBlue);
+    padding: 2rem;
+    cursor: pointer;
+}
+footer {
+    position: absolute;
+    z-index: 0;
+    bottom: 1rem;
+    text-align: center;
+    font-size: .8rem;
+}
+.attribution a {
+    text-decoration: none;
+    color: black;
+    
+}
+@media (max-width: 375px) {
+    body {
+        background-image: url('./images/pattern-background-mobile.svg');
+  background-color: var(--PaleBlue);
+  background-repeat: no-repeat;
+  background-size: contain;
+    }
+}
